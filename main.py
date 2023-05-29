@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 # загружаем переменные окружения из файла .env
-load_dotenv()
+#load_dotenv()
 
 # подключениe к базе данных
 user = os.getenv("POSTGRES_USER")
@@ -13,6 +13,7 @@ password = os.getenv("POSTGRES_PASSWORD")
 host=os.getenv("POSTGRES_HOST")
 port = os.getenv("POSTGRES_PORT")
 database = os.getenv("POSTGRES_DB")
+
 
 
 # устанавливаем соединение с базой данных

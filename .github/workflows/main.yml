@@ -18,6 +18,6 @@ jobs:
          tags: myapp:latest
     - name: Test
       run: |
-       make up
-       make test
+        docker-compose run --rm app python -m unittest test.py
+        docker-compose run --rm app pylint main.py test.py
        

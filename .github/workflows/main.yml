@@ -16,6 +16,10 @@ jobs:
           file: ./Dockerfile
           push: false
           tags: myapp:latest
+      - name: Install sudo
+        run: apt-get update && apt-get install -y sudo
+      - name: Add user to sudo group
+        run: usermod -aG sudo $USER && newgrp sudo
       - name: Install dependencies
         run: |
           docker-compose run --rm app pip install -r requirements.txt

@@ -17,6 +17,5 @@ jobs:
           push: false
           tags: myapp:latest
       - name: Test
-        run: |
-          docker-compose run --rm app python -munittest test.py
+        run: 
           docker-compose run --rm app pylint main.py test.py

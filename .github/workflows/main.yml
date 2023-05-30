@@ -16,6 +16,10 @@ jobs:
           file: ./Dockerfile
           push: false
           tags: myapp:latest
+      - name: Install dependencies
+        run: |
+          docker-compose run --rm app pip install -r requirements.txt
+          docker-compose run --rm app apt-get update && apt-get install -y pylint
       - name: Test
         run: 
           docker-compose run --rm app pylint main.py test.py

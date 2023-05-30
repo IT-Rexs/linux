@@ -19,6 +19,8 @@ host = os.environ.get('POSTGRES_HOST')
 port = os.environ.get('POSTGRES_PORT')
 database = os.environ.get('POSTGRES_DB')
 
+print(user)
+print(password)
 
 
 # устанавливаем соединение с базой данных
